@@ -1,0 +1,37 @@
+<div id="wiki-wrapper" class="results">
+<div id="head">
+  <div id="header">
+    {{>searchbar}}
+    <h2 id="homelink"><a href="/">develop.re</a></h2>
+  </div>
+  <h1>{{page_header}}</h1>
+
+  <h1>Search Results for <strong>{{query}}</strong></h1>
+</div>
+<div id="results">
+
+{{#has_results}}
+  <ul>
+    {{#results}}
+    <li>
+      <a href="{{base_url}}/{{name}}">{{name}}</a>
+      <span class="count">({{count}} matches)</span>
+    </li>
+    {{/results}}
+  </ul>
+{{/has_results}}
+
+{{#no_results}}
+  <p id="no-results">
+    There are no results for your search <strong>{{query}}</strong>.
+  </p>
+{{/no_results}}
+
+</div>
+<div id="footer">
+  <ul class="actions">
+    <li class="minibutton"><a href="#">Back to Top</a></li>
+  </ul>
+</div>
+</div>
+
